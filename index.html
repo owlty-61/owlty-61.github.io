@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常見貓品種介紹</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .cat-card {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>貓品種介紹</h1>
+        <p>帶你認識幾種受歡迎的貓咪品種</p>
+    </header>
+
+    <main>
+        <div class="cat-card">
+            <h2>1. 波斯貓 (Persian Cat)</h2>
+            <p><strong>特徵：</strong> 波斯貓擁有圓滾滾的臉龐、短短的鼻子和長而華麗的被毛。牠們的個性通常非常溫馴、安靜，喜歡舒適的室內生活。</p>
+            <p><strong>照顧重點：</strong> 因為毛髮較長，需要主人每天幫忙梳理，以避免打結。</p>
+        </div>
+
+        <div class="cat-card">
+            <h2>2. 英國短毛貓 (British Shorthair)</h2>
+            <p><strong>特徵：</strong> 英國短毛貓身材圓潤扎實，擁有厚實的短毛和一雙大圓眼（常見為銅色或橘色）。牠們個性獨立、隨和且脾氣很好。</p>
+            <p><strong>照顧重點：</strong> 由於骨架較大且容易發胖，需要注意飲食控制與適當運動。</p>
+        </div>
+    </main>
+
+    $(document).ready(function() {
+      $('.cat-card h2').click(function() {
+            $(this).parent('.cat-card').find('p').slideToggle(300);
+        });
+      $('.cat-card').hover(
+            function() { $(this).css('background-color', '#f1f1f1'); },
+            function() { $(this).css('background-color', '#fff'); }
+        );
+    });
+  
+</body>
+</html>
